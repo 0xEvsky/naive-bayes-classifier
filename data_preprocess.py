@@ -1,5 +1,5 @@
 import numpy as np
-from pandas import DataFrame
+from pandas import DataFrame, Series
 from sklearn.preprocessing import LabelEncoder
 
 def encode_features(data: DataFrame) -> DataFrame:
@@ -10,6 +10,13 @@ def encode_features(data: DataFrame) -> DataFrame:
         encoded_data[col] = encoder.fit_transform(encoded_data[col])
     
     return encoded_data
+
+
+def construct_df(data_values: np.ndarray, lables: Series) -> DataFrame:
+    df = DataFrame(data_values.T)
+    df['class'] = lables.values
+    
+    return df
 
 class PCA:
     def __init__(self, df: DataFrame):
@@ -48,7 +55,7 @@ class PCA:
         F = shifted_values.T
         
         return Q @ F
-
+        
 
 class FeatureSelection:
     pass
