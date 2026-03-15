@@ -4,18 +4,6 @@ A machine learning assignment implementing Naive Bayes classification and Princi
 
 ---
 
-## Project Structure
-
-```
-├── cate_nb.ipynb        # Categorical Naive Bayes — Mushroom dataset
-├── minist.ipynb         # Gaussian Naive Bayes — MNIST dataset
-├── data_preprocess.py   # PCA, FeatureSelection, and encoding utilities
-├── data/                # Datasets (not tracked by git)
-└── README.md
-```
-
----
-
 ## Datasets
 
 - **Mushroom** (categorical) — UCI Machine Learning Repository. 8,124 samples, 22 features, binary classification (edible / poisonous).
