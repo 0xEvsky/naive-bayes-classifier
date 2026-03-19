@@ -41,5 +41,5 @@ MNIST data is fetched automatically via `fetch_openml` on first run (requires in
 
 | Dataset  | Baseline | Feature Selection | PCA       |
 |----------|----------|-------------------|-----------|
-| Mushroom | 99.57%   | —                 | —         |
+| Mushroom | 99.57%   | 90.58%            | 81.78%    |
 | MNIST    | 72.79%   | 73.11%            | **87.20%**|
