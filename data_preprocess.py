@@ -54,8 +54,12 @@ class PCA:
         Q = eigenvectors[:, :k].T
         F = shifted_values.T
         
-        return Q @ F
+        return (Q @ F).T
         
 
 class FeatureSelection:
-    pass
+    @staticmethod
+    def select_top_variance(X, k=100):
+        variances = np.var(X, axis=0)
+        top_indices = np.argsort(variances)[-k:]
+        return X[:, top_indices]
